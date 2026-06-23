@@ -17,12 +17,21 @@ head_src = src[:src.find('<script type="text/x-dc"')]
 # ---------- данные ----------
 TABS = ['Комфорт', 'Комфорт+', 'Премиум', 'Бизнес & Спорт']
 PERIODS = ['1–2 дня', '3–7 дней', '8–14 дней', '15–30 дней']
-CARS = []
-for m in re.finditer(r"mk\((\d+), '([^']*)', '([^']*)', (\d+), (\d+), '([^']*)', '([^']*)', \[([^\]]*)\], '([^']*)'\)", src):
-    g = m.groups()
-    prices = re.findall(r"'([^']*)'", g[7])
-    CARS.append(dict(brand=g[1], model=g[2], cls=int(g[3]), rng=g[4], accel=g[5],
-                     battery=g[6], prices=prices, img=g[8]))
+# Реальный парк клиента (5 авто). Цены — плейсхолдеры (подтвердить у клиента).
+# Фото — проверенные Unsplash-ID (плейсхолдеры под реальные фото клиента).
+IMG = lambda i: f"https://images.unsplash.com/photo-{i}?auto=format&fit=crop&w=720&q=75"
+CARS = [
+    dict(brand="Tesla",   model="Model Y", year="2022", rng="533", accel="5,0", battery="75",
+         prices=['8 900', '7 600', '6 600', '5 400'], img=IMG("1560958089-b8a1929cea89")),
+    dict(brand="Tesla",   model="Model 3", year="2022", rng="510", accel="6,1", battery="60",
+         prices=['7 900', '6 800', '5 900', '4 900'], img=IMG("1606016159991-dfe4f2746ad5")),
+    dict(brand="Evolute", model="i-Sky",   year="2024", rng="405", accel="9,5", battery="62",
+         prices=['5 900', '5 100', '4 400', '3 600'], img=IMG("1718780138801-d93ebf484827")),
+    dict(brand="Evolute", model="i-Pro",   year="2022", rng="433", accel="9,9", battery="54",
+         prices=['5 500', '4 700', '4 100', '3 400'], img=IMG("1571987502227-9231b837d92a")),
+    dict(brand="BMW",     model="i3",      year="",     rng="300", accel="7,3", battery="42",
+         prices=['6 900', '5 900', '5 100', '4 200'], img=IMG("1617704548623-340376564e68")),
+]
 
 # EN-словарь из шаблона
 mEN = re.search(r'var EN = (\{.*?\});', src, re.S)
@@ -54,21 +63,13 @@ def find_scfor(s, marker):
             depth -= 1; i = nxt_close + 9
     return o, inner0, nxt_close, i
 
-# --- 1. ТАБЫ ---
+# --- 1. ТАБЫ: удалить чипсы целиком (вместе с обёрткой) ---
 o, i0, ic, e = find_scfor(body, '<sc-for list="{{ tabs }}"')
-tab_html = ""
-for idx, label in enumerate(TABS):
-    if idx == 0:
-        tab_html += (f'<button class="cat-tab is-active" data-tab="{idx}" style="border:none;background:#0A0B0D;color:#fff;'
-                     'border-radius:999px;padding:12px 22px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;transition:all .15s ease">'
-                     f'{label}</button>')
-    else:
-        tab_html += (f'<button class="cat-tab" data-tab="{idx}" style="border:1px solid rgba(10,11,13,0.12);background:#fff;color:#0A0B0D;'
-                     'border-radius:999px;padding:12px 22px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;transition:all .15s ease">'
-                     f'{label}</button>')
-body = body[:o] + tab_html + body[e:]
+wrap_start = body.rfind('<div', 0, o)
+wrap_end = body.index('</div>', e) + 6
+body = body[:wrap_start] + body[wrap_end:]
 
-# --- 2. КАРТОЧКИ АВТО ---
+# --- 2. КАРТОЧКИ АВТО -> КАРУСЕЛЬ ---
 o, i0, ic, e = find_scfor(body, '<sc-for list="{{ visibleCars }}"')
 card_tpl = body[i0:ic]
 # извлечь шаблон строки таблицы цен (ladder)
@@ -87,8 +88,12 @@ for c in CARS:
         t = tier_tpl.replace('{{ tier.period }}', p).replace('{{ tier.price }}', price)
         ladder += t
     card = card_wo.replace('@@LADDER@@', ladder)
-    card = (card.replace('{{ car.clsLabel }}', TABS[c['cls']])
-                .replace('{{ car.brand }}', c['brand'])
+    # бейдж: год выпуска (вместо класса); без года — убрать бейдж
+    if c['year']:
+        card = card.replace('{{ car.clsLabel }}', c['year'])
+    else:
+        card = re.sub(r'<span style="position:absolute;top:16px;left:16px;[^"]*">\{\{ car\.clsLabel \}\}</span>', '', card)
+    card = (card.replace('{{ car.brand }}', c['brand'])
                 .replace('{{ car.model }}', c['model'])
                 .replace('{{ car.range }}', c['rng'])
                 .replace('{{ car.accel }}', c['accel'])
@@ -96,11 +101,23 @@ for c in CARS:
                 .replace("url('{{ car.img }}')", f"url('{c['img']}')")
                 .replace('{{ car.img }}', c['img']))
     card = card.replace('onclick="{{ car.book }}"', 'data-act="contact"')
-    # добавить data-cls на корневой div карточки
+    # карточка = слайд карусели (фикс. ширина + snap)
     card = card.replace('<div style="background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04)',
-                        f'<div class="car-card" data-cls="{c["cls"]}" style="background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04)')
+                        '<div class="car-card" style="flex:0 0 330px;scroll-snap-align:start;background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04)')
     cards_html += card
-body = body[:o] + cards_html + body[e:]
+
+CHEV_L = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A0B0D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg>'
+CHEV_R = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A0B0D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>'
+ARROW = lambda cls, lbl, pos, chev: (f'<button class="{cls}" aria-label="{lbl}" style="position:absolute;top:130px;{pos};transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:#fff;border:1px solid rgba(10,11,13,0.1);box-shadow:0 10px 28px rgba(0,0,0,0.14);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:5;transition:transform .15s ease" style-hover="transform:translateY(-50%) scale(1.08)">' + chev + '</button>')
+carousel = ('<div class="cat-carousel" style="position:relative">'
+            '<div class="cat-track" style="display:flex;gap:24px;overflow-x:auto;scroll-behavior:smooth;padding:6px 0 16px">'
+            + cards_html + '</div>'
+            + ARROW('cat-prev', 'Назад', 'left:-8px', CHEV_L)
+            + ARROW('cat-next', 'Вперёд', 'right:-8px', CHEV_R)
+            + '</div>')
+grid_open = body.rfind('<div', 0, o)
+grid_close = body.index('</div>', e) + 6
+body = body[:grid_open] + carousel + body[grid_close:]
 
 # --- 3. FAQ ---
 o, i0, ic, e = find_scfor(body, '<sc-for list="{{ faqItems }}"')
@@ -223,22 +240,19 @@ base_css = """*{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:Manrope,system-ui,sans-serif;color:#0A0B0D;background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img,video{max-width:100%}
-.eh-lift{transition:transform .2s ease}
+.cat-track{scrollbar-width:none}
+.cat-track::-webkit-scrollbar{display:none}
+@media(max-width:760px){.cat-prev,.cat-next{display:none!important}.car-card{flex:0 0 84%!important}}
 """
 
 JS = """
 (function(){
-  // табы каталога
-  var tabs=document.querySelectorAll('.cat-tab'), cards=document.querySelectorAll('.car-card');
-  cards.forEach(function(c){c.style.display=(c.dataset.cls==='0')?'flex':'none';}); // стартовый таб
-
-  tabs.forEach(function(t){t.addEventListener('click',function(){
-    var cls=t.dataset.tab;
-    tabs.forEach(function(x){x.classList.remove('is-active');x.style.background='#fff';x.style.color='#0A0B0D';x.style.border='1px solid rgba(10,11,13,0.12)';});
-    t.classList.add('is-active');t.style.background='#0A0B0D';t.style.color='#fff';t.style.border='none';
-    cards.forEach(function(c){c.style.display=(c.dataset.cls===cls)?'flex':'none';});
-    applyLang();
-  });});
+  // карусель каталога
+  var track=document.querySelector('.cat-track');
+  function carStep(){var c=track&&track.querySelector('.car-card');return c?c.getBoundingClientRect().width+24:340;}
+  var pv=document.querySelector('.cat-prev'), nx=document.querySelector('.cat-next');
+  if(pv)pv.addEventListener('click',function(){track.scrollLeft-=carStep();});
+  if(nx)nx.addEventListener('click',function(){track.scrollLeft+=carStep();});
   // аккордеон FAQ
   document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){
     var wrap=b.parentElement, ans=wrap.querySelector('.faq-a'), open=ans.style.display!=='none';

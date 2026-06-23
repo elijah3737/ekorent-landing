@@ -26,7 +26,9 @@
 html{scroll-behavior:smooth}
 body{font-family:Manrope,system-ui,sans-serif;color:#0A0B0D;background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img,video{max-width:100%}
-.eh-lift{transition:transform .2s ease}
+.cat-track{scrollbar-width:none}
+.cat-track::-webkit-scrollbar{display:none}
+@media(max-width:760px){.cat-prev,.cat-next{display:none!important}.car-card{flex:0 0 84%!important}}
 
 .eh0:hover{color:#00A23F;border-color:#00E05B}
 .eh1:hover{color:#00A23F;border-color:#00E05B}
@@ -42,43 +44,31 @@ img,video{max-width:100%}
 .eh11:hover{background:#00cb50;transform:translateY(-1px)}
 .eh12:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,0.1)}
 .eh13:hover{background:#00cb50;transform:translateY(-1px)}
-.eh14:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,0.1)}
-.eh15:hover{background:#00cb50;transform:translateY(-1px)}
-.eh16:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,0.1)}
-.eh17:hover{background:#00cb50;transform:translateY(-1px)}
-.eh18:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,0.1)}
-.eh19:hover{background:#00cb50;transform:translateY(-1px)}
-.eh20:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,0.1)}
-.eh21:hover{background:#00cb50;transform:translateY(-1px)}
-.eh22:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,0.1)}
-.eh23:hover{background:#00cb50;transform:translateY(-1px)}
-.eh24:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,0.1)}
-.eh25:hover{background:#00cb50;transform:translateY(-1px)}
-.eh26:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,0.1)}
-.eh27:hover{background:#00cb50;transform:translateY(-1px)}
-.eh28:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(0,0,0,0.10);border-color:rgba(0,224,91,0.6)}
-.eh29:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(0,0,0,0.10);border-color:rgba(0,224,91,0.6)}
-.eh30:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(0,0,0,0.10);border-color:rgba(0,224,91,0.6)}
-.eh31:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(0,0,0,0.10);border-color:rgba(0,224,91,0.6)}
-.eh32:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(0,0,0,0.10);border-color:rgba(0,224,91,0.6)}
-.eh33:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(0,224,91,0.4)}
-.eh34:hover{background:#fff;color:#0A7C3B}
-.eh35:hover{background:#fff;color:#0A7C3B}
-.eh36:hover{background:#fff;color:#0A7C3B}
-.eh37:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,0.18)}
-.eh38:hover{background:#00E05B;color:#04140B}
-.eh39:hover{background:#00E05B;color:#04140B}
-.eh40:hover{background:#00E05B;color:#04140B}
-.eh41:hover{color:#00E05B}
-.eh42:hover{color:#00E05B}
-.eh43:hover{color:#00E05B}
-.eh44:hover{color:#00E05B}
-.eh45:hover{color:#00E05B}
-.eh46:hover{color:#00E05B}
-.eh47:hover{color:#00E05B}
-.eh48:hover{color:#00E05B}
-.eh49:hover{color:#00E05B}
-.eh50:hover{transform:scale(1.07)}
+.eh14:hover{transform:translateY(-50%) scale(1.08)}
+.eh15:hover{transform:translateY(-50%) scale(1.08)}
+.eh16:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(0,0,0,0.10);border-color:rgba(0,224,91,0.6)}
+.eh17:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(0,0,0,0.10);border-color:rgba(0,224,91,0.6)}
+.eh18:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(0,0,0,0.10);border-color:rgba(0,224,91,0.6)}
+.eh19:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(0,0,0,0.10);border-color:rgba(0,224,91,0.6)}
+.eh20:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(0,0,0,0.10);border-color:rgba(0,224,91,0.6)}
+.eh21:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(0,224,91,0.4)}
+.eh22:hover{background:#fff;color:#0A7C3B}
+.eh23:hover{background:#fff;color:#0A7C3B}
+.eh24:hover{background:#fff;color:#0A7C3B}
+.eh25:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,0.18)}
+.eh26:hover{background:#00E05B;color:#04140B}
+.eh27:hover{background:#00E05B;color:#04140B}
+.eh28:hover{background:#00E05B;color:#04140B}
+.eh29:hover{color:#00E05B}
+.eh30:hover{color:#00E05B}
+.eh31:hover{color:#00E05B}
+.eh32:hover{color:#00E05B}
+.eh33:hover{color:#00E05B}
+.eh34:hover{color:#00E05B}
+.eh35:hover{color:#00E05B}
+.eh36:hover{color:#00E05B}
+.eh37:hover{color:#00E05B}
+.eh38:hover{transform:scale(1.07)}
 </style>
 <style>/* cyrillic-ext */
 @font-face {
@@ -597,87 +587,27 @@ img,video{max-width:100%}
         <p style="font-size:17px;color:#585D63;margin:14px 0 0;line-height:1.5">Цена снижается с увеличением срока аренды. Бронирование — в 2–3 клика через ассистента.</p>
       </div>
 
-      <div style="display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 36px">
-        <button class="cat-tab is-active" data-tab="0" style="border:none;background:#0A0B0D;color:#fff;border-radius:999px;padding:12px 22px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;transition:all .15s ease">Комфорт</button><button class="cat-tab" data-tab="1" style="border:1px solid rgba(10,11,13,0.12);background:#fff;color:#0A0B0D;border-radius:999px;padding:12px 22px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;transition:all .15s ease">Комфорт+</button><button class="cat-tab" data-tab="2" style="border:1px solid rgba(10,11,13,0.12);background:#fff;color:#0A0B0D;border-radius:999px;padding:12px 22px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;transition:all .15s ease">Премиум</button><button class="cat-tab" data-tab="3" style="border:1px solid rgba(10,11,13,0.12);background:#fff;color:#0A0B0D;border-radius:999px;padding:12px 22px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;transition:all .15s ease">Бизнес & Спорт</button>
-      </div>
+      
 
-      <div style="opacity:1;display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:24px">
-        
-          <div class="car-card" data-cls="0" style="background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh4">
+      <div class="cat-carousel" style="position:relative"><div class="cat-track" style="display:flex;gap:24px;overflow-x:auto;scroll-behavior:smooth;padding:6px 0 16px">
+          <div class="car-card" style="flex:0 0 330px;scroll-snap-align:start;background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh4">
             <div style="position:relative;background:linear-gradient(135deg,#EEF1F0,#F8FAF9);padding:18px">
-              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">Комфорт</span>
-              <div role="img" aria-label="BYD Seal" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1711921127505-f4a8727329a5?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
+              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">2022</span>
+              <div role="img" aria-label="Tesla Model Y" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
             </div>
             <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:16px;flex:1">
               <div style="display:flex;align-items:baseline;gap:7px">
-                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">BYD</span>
-                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">Seal</span>
+                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">Tesla</span>
+                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">Model Y</span>
               </div>
               <div style="display:flex;gap:8px">
                 <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="#00A23F"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">570</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
+                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">533</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
                 </div>
                 <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 13.5V9"></path><path d="M9.5 2h5"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">5,9</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="16" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2"><rect x="2" y="7" width="16" height="10" rx="2.5"></rect><path d="M20.5 10.5v3" stroke-linecap="round"></path><rect x="4.5" y="9.5" width="7" height="5" fill="#00A23F" stroke="none"></rect></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">82</span><span style="font-size:10px;color:#585D63;margin-top:2px">кВт·ч</span></div>
-                </div>
-              </div>
-              <div style="margin-top:auto">
-                
-                  <div style="border-top:1px solid rgba(10,11,13,0.07);padding-top:13px">
-                    <div style="font-size:11px;font-weight:700;color:#6E7378;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:7px">Стоимость аренды</div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">1–2 дня</span>
-                        <span style="font-weight:700">9 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">3–7 дней</span>
-                        <span style="font-weight:700">8 500 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">8–14 дней</span>
-                        <span style="font-weight:700">7 400 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">15–30 дней</span>
-                        <span style="font-weight:700">5 900 ₽/сут</span>
-                      </div>
-                    
-                  </div>
-                
-                
-              </div>
-              <button data-act="contact" style="width:100%;background:#00E05B;color:#04140B;border:none;border-radius:14px;padding:14px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s ease,transform .15s ease" class="eh5">Забронировать<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
-            </div>
-          </div>
-        
-          <div class="car-card" data-cls="0" style="background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh6">
-            <div style="position:relative;background:linear-gradient(135deg,#EEF1F0,#F8FAF9);padding:18px">
-              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">Комфорт</span>
-              <div role="img" aria-label="Zeekr 007" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1571987502227-9231b837d92a?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
-            </div>
-            <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:16px;flex:1">
-              <div style="display:flex;align-items:baseline;gap:7px">
-                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">Zeekr</span>
-                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">007</span>
-              </div>
-              <div style="display:flex;gap:8px">
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#00A23F"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">600</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 13.5V9"></path><path d="M9.5 2h5"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">5,5</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
+                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">5,0</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
                 </div>
                 <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
                   <svg width="16" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2"><rect x="2" y="7" width="16" height="10" rx="2.5"></rect><path d="M20.5 10.5v3" stroke-linecap="round"></path><rect x="4.5" y="9.5" width="7" height="5" fill="#00A23F" stroke="none"></rect></svg>
@@ -691,35 +621,35 @@ img,video{max-width:100%}
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">1–2 дня</span>
-                        <span style="font-weight:700">10 900 ₽/сут</span>
+                        <span style="font-weight:700">8 900 ₽/сут</span>
                       </div>
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">3–7 дней</span>
-                        <span style="font-weight:700">9 200 ₽/сут</span>
+                        <span style="font-weight:700">7 600 ₽/сут</span>
                       </div>
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">8–14 дней</span>
-                        <span style="font-weight:700">7 900 ₽/сут</span>
+                        <span style="font-weight:700">6 600 ₽/сут</span>
                       </div>
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">15–30 дней</span>
-                        <span style="font-weight:700">6 400 ₽/сут</span>
+                        <span style="font-weight:700">5 400 ₽/сут</span>
                       </div>
                     
                   </div>
                 
                 
               </div>
-              <button data-act="contact" style="width:100%;background:#00E05B;color:#04140B;border:none;border-radius:14px;padding:14px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s ease,transform .15s ease" class="eh7">Забронировать<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+              <button data-act="contact" style="width:100%;background:#00E05B;color:#04140B;border:none;border-radius:14px;padding:14px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s ease,transform .15s ease" class="eh5">Забронировать<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
             </div>
           </div>
         
-          <div class="car-card" data-cls="0" style="background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh8">
+          <div class="car-card" style="flex:0 0 330px;scroll-snap-align:start;background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh6">
             <div style="position:relative;background:linear-gradient(135deg,#EEF1F0,#F8FAF9);padding:18px">
-              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">Комфорт</span>
+              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">2022</span>
               <div role="img" aria-label="Tesla Model 3" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
             </div>
             <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:16px;flex:1">
@@ -748,22 +678,79 @@ img,video{max-width:100%}
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">1–2 дня</span>
-                        <span style="font-weight:700">9 900 ₽/сут</span>
+                        <span style="font-weight:700">7 900 ₽/сут</span>
                       </div>
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">3–7 дней</span>
-                        <span style="font-weight:700">8 400 ₽/сут</span>
+                        <span style="font-weight:700">6 800 ₽/сут</span>
                       </div>
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">8–14 дней</span>
-                        <span style="font-weight:700">7 300 ₽/сут</span>
+                        <span style="font-weight:700">5 900 ₽/сут</span>
                       </div>
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">15–30 дней</span>
+                        <span style="font-weight:700">4 900 ₽/сут</span>
+                      </div>
+                    
+                  </div>
+                
+                
+              </div>
+              <button data-act="contact" style="width:100%;background:#00E05B;color:#04140B;border:none;border-radius:14px;padding:14px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s ease,transform .15s ease" class="eh7">Забронировать<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+            </div>
+          </div>
+        
+          <div class="car-card" style="flex:0 0 330px;scroll-snap-align:start;background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh8">
+            <div style="position:relative;background:linear-gradient(135deg,#EEF1F0,#F8FAF9);padding:18px">
+              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">2024</span>
+              <div role="img" aria-label="Evolute i-Sky" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1718780138801-d93ebf484827?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
+            </div>
+            <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:16px;flex:1">
+              <div style="display:flex;align-items:baseline;gap:7px">
+                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">Evolute</span>
+                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">i-Sky</span>
+              </div>
+              <div style="display:flex;gap:8px">
+                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#00A23F"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg>
+                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">405</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
+                </div>
+                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 13.5V9"></path><path d="M9.5 2h5"></path></svg>
+                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">9,5</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
+                </div>
+                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
+                  <svg width="16" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2"><rect x="2" y="7" width="16" height="10" rx="2.5"></rect><path d="M20.5 10.5v3" stroke-linecap="round"></path><rect x="4.5" y="9.5" width="7" height="5" fill="#00A23F" stroke="none"></rect></svg>
+                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">62</span><span style="font-size:10px;color:#585D63;margin-top:2px">кВт·ч</span></div>
+                </div>
+              </div>
+              <div style="margin-top:auto">
+                
+                  <div style="border-top:1px solid rgba(10,11,13,0.07);padding-top:13px">
+                    <div style="font-size:11px;font-weight:700;color:#6E7378;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:7px">Стоимость аренды</div>
+                    
+                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
+                        <span style="color:#585D63">1–2 дня</span>
                         <span style="font-weight:700">5 900 ₽/сут</span>
+                      </div>
+                    
+                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
+                        <span style="color:#585D63">3–7 дней</span>
+                        <span style="font-weight:700">5 100 ₽/сут</span>
+                      </div>
+                    
+                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
+                        <span style="color:#585D63">8–14 дней</span>
+                        <span style="font-weight:700">4 400 ₽/сут</span>
+                      </div>
+                    
+                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
+                        <span style="color:#585D63">15–30 дней</span>
+                        <span style="font-weight:700">3 600 ₽/сут</span>
                       </div>
                     
                   </div>
@@ -774,28 +761,28 @@ img,video{max-width:100%}
             </div>
           </div>
         
-          <div class="car-card" data-cls="1" style="background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh10">
+          <div class="car-card" style="flex:0 0 330px;scroll-snap-align:start;background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh10">
             <div style="position:relative;background:linear-gradient(135deg,#EEF1F0,#F8FAF9);padding:18px">
-              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">Комфорт+</span>
-              <div role="img" aria-label="Xiaomi SU7" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1619384557848-5d5355ec81ec?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
+              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">2022</span>
+              <div role="img" aria-label="Evolute i-Pro" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1571987502227-9231b837d92a?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
             </div>
             <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:16px;flex:1">
               <div style="display:flex;align-items:baseline;gap:7px">
-                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">Xiaomi</span>
-                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">SU7</span>
+                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">Evolute</span>
+                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">i-Pro</span>
               </div>
               <div style="display:flex;gap:8px">
                 <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="#00A23F"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">700</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
+                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">433</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
                 </div>
                 <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 13.5V9"></path><path d="M9.5 2h5"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">5,3</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
+                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">9,9</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
                 </div>
                 <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
                   <svg width="16" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2"><rect x="2" y="7" width="16" height="10" rx="2.5"></rect><path d="M20.5 10.5v3" stroke-linecap="round"></path><rect x="4.5" y="9.5" width="7" height="5" fill="#00A23F" stroke="none"></rect></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">73</span><span style="font-size:10px;color:#585D63;margin-top:2px">кВт·ч</span></div>
+                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">54</span><span style="font-size:10px;color:#585D63;margin-top:2px">кВт·ч</span></div>
                 </div>
               </div>
               <div style="margin-top:auto">
@@ -805,22 +792,22 @@ img,video{max-width:100%}
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">1–2 дня</span>
-                        <span style="font-weight:700">13 900 ₽/сут</span>
+                        <span style="font-weight:700">5 500 ₽/сут</span>
                       </div>
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">3–7 дней</span>
-                        <span style="font-weight:700">11 900 ₽/сут</span>
+                        <span style="font-weight:700">4 700 ₽/сут</span>
                       </div>
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">8–14 дней</span>
-                        <span style="font-weight:700">9 900 ₽/сут</span>
+                        <span style="font-weight:700">4 100 ₽/сут</span>
                       </div>
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">15–30 дней</span>
-                        <span style="font-weight:700">7 900 ₽/сут</span>
+                        <span style="font-weight:700">3 400 ₽/сут</span>
                       </div>
                     
                   </div>
@@ -831,28 +818,28 @@ img,video{max-width:100%}
             </div>
           </div>
         
-          <div class="car-card" data-cls="1" style="background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh12">
+          <div class="car-card" style="flex:0 0 330px;scroll-snap-align:start;background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh12">
             <div style="position:relative;background:linear-gradient(135deg,#EEF1F0,#F8FAF9);padding:18px">
-              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">Комфорт+</span>
-              <div role="img" aria-label="Tesla Model 3 Performance" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
+              
+              <div role="img" aria-label="BMW i3" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1617704548623-340376564e68?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
             </div>
             <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:16px;flex:1">
               <div style="display:flex;align-items:baseline;gap:7px">
-                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">Tesla</span>
-                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">Model 3 Performance</span>
+                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">BMW</span>
+                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">i3</span>
               </div>
               <div style="display:flex;gap:8px">
                 <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="#00A23F"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">528</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
+                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">300</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
                 </div>
                 <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 13.5V9"></path><path d="M9.5 2h5"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">3,1</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
+                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">7,3</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
                 </div>
                 <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
                   <svg width="16" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2"><rect x="2" y="7" width="16" height="10" rx="2.5"></rect><path d="M20.5 10.5v3" stroke-linecap="round"></path><rect x="4.5" y="9.5" width="7" height="5" fill="#00A23F" stroke="none"></rect></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">79</span><span style="font-size:10px;color:#585D63;margin-top:2px">кВт·ч</span></div>
+                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">42</span><span style="font-size:10px;color:#585D63;margin-top:2px">кВт·ч</span></div>
                 </div>
               </div>
               <div style="margin-top:auto">
@@ -862,22 +849,22 @@ img,video{max-width:100%}
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">1–2 дня</span>
-                        <span style="font-weight:700">14 900 ₽/сут</span>
+                        <span style="font-weight:700">6 900 ₽/сут</span>
                       </div>
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">3–7 дней</span>
-                        <span style="font-weight:700">12 500 ₽/сут</span>
+                        <span style="font-weight:700">5 900 ₽/сут</span>
                       </div>
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">8–14 дней</span>
-                        <span style="font-weight:700">10 500 ₽/сут</span>
+                        <span style="font-weight:700">5 100 ₽/сут</span>
                       </div>
                     
                       <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
                         <span style="color:#585D63">15–30 дней</span>
-                        <span style="font-weight:700">8 400 ₽/сут</span>
+                        <span style="font-weight:700">4 200 ₽/сут</span>
                       </div>
                     
                   </div>
@@ -887,407 +874,7 @@ img,video{max-width:100%}
               <button data-act="contact" style="width:100%;background:#00E05B;color:#04140B;border:none;border-radius:14px;padding:14px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s ease,transform .15s ease" class="eh13">Забронировать<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
             </div>
           </div>
-        
-          <div class="car-card" data-cls="1" style="background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh14">
-            <div style="position:relative;background:linear-gradient(135deg,#EEF1F0,#F8FAF9);padding:18px">
-              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">Комфорт+</span>
-              <div role="img" aria-label="Zeekr 001" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1718780138801-d93ebf484827?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
-            </div>
-            <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:16px;flex:1">
-              <div style="display:flex;align-items:baseline;gap:7px">
-                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">Zeekr</span>
-                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">001</span>
-              </div>
-              <div style="display:flex;gap:8px">
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#00A23F"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">620</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 13.5V9"></path><path d="M9.5 2h5"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">3,8</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="16" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2"><rect x="2" y="7" width="16" height="10" rx="2.5"></rect><path d="M20.5 10.5v3" stroke-linecap="round"></path><rect x="4.5" y="9.5" width="7" height="5" fill="#00A23F" stroke="none"></rect></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">100</span><span style="font-size:10px;color:#585D63;margin-top:2px">кВт·ч</span></div>
-                </div>
-              </div>
-              <div style="margin-top:auto">
-                
-                  <div style="border-top:1px solid rgba(10,11,13,0.07);padding-top:13px">
-                    <div style="font-size:11px;font-weight:700;color:#6E7378;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:7px">Стоимость аренды</div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">1–2 дня</span>
-                        <span style="font-weight:700">13 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">3–7 дней</span>
-                        <span style="font-weight:700">11 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">8–14 дней</span>
-                        <span style="font-weight:700">9 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">15–30 дней</span>
-                        <span style="font-weight:700">7 900 ₽/сут</span>
-                      </div>
-                    
-                  </div>
-                
-                
-              </div>
-              <button data-act="contact" style="width:100%;background:#00E05B;color:#04140B;border:none;border-radius:14px;padding:14px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s ease,transform .15s ease" class="eh15">Забронировать<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
-            </div>
-          </div>
-        
-          <div class="car-card" data-cls="2" style="background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh16">
-            <div style="position:relative;background:linear-gradient(135deg,#EEF1F0,#F8FAF9);padding:18px">
-              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">Премиум</span>
-              <div role="img" aria-label="BMW i4" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1617704548623-340376564e68?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
-            </div>
-            <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:16px;flex:1">
-              <div style="display:flex;align-items:baseline;gap:7px">
-                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">BMW</span>
-                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">i4</span>
-              </div>
-              <div style="display:flex;gap:8px">
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#00A23F"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">590</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 13.5V9"></path><path d="M9.5 2h5"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">5,7</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="16" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2"><rect x="2" y="7" width="16" height="10" rx="2.5"></rect><path d="M20.5 10.5v3" stroke-linecap="round"></path><rect x="4.5" y="9.5" width="7" height="5" fill="#00A23F" stroke="none"></rect></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">83</span><span style="font-size:10px;color:#585D63;margin-top:2px">кВт·ч</span></div>
-                </div>
-              </div>
-              <div style="margin-top:auto">
-                
-                  <div style="border-top:1px solid rgba(10,11,13,0.07);padding-top:13px">
-                    <div style="font-size:11px;font-weight:700;color:#6E7378;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:7px">Стоимость аренды</div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">1–2 дня</span>
-                        <span style="font-weight:700">17 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">3–7 дней</span>
-                        <span style="font-weight:700">15 500 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">8–14 дней</span>
-                        <span style="font-weight:700">13 500 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">15–30 дней</span>
-                        <span style="font-weight:700">11 900 ₽/сут</span>
-                      </div>
-                    
-                  </div>
-                
-                
-              </div>
-              <button data-act="contact" style="width:100%;background:#00E05B;color:#04140B;border:none;border-radius:14px;padding:14px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s ease,transform .15s ease" class="eh17">Забронировать<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
-            </div>
-          </div>
-        
-          <div class="car-card" data-cls="2" style="background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh18">
-            <div style="position:relative;background:linear-gradient(135deg,#EEF1F0,#F8FAF9);padding:18px">
-              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">Премиум</span>
-              <div role="img" aria-label="Mercedes EQE" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1541447270888-83e8494f9c06?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
-            </div>
-            <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:16px;flex:1">
-              <div style="display:flex;align-items:baseline;gap:7px">
-                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">Mercedes</span>
-                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">EQE</span>
-              </div>
-              <div style="display:flex;gap:8px">
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#00A23F"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">639</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 13.5V9"></path><path d="M9.5 2h5"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">6,4</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="16" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2"><rect x="2" y="7" width="16" height="10" rx="2.5"></rect><path d="M20.5 10.5v3" stroke-linecap="round"></path><rect x="4.5" y="9.5" width="7" height="5" fill="#00A23F" stroke="none"></rect></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">89</span><span style="font-size:10px;color:#585D63;margin-top:2px">кВт·ч</span></div>
-                </div>
-              </div>
-              <div style="margin-top:auto">
-                
-                  <div style="border-top:1px solid rgba(10,11,13,0.07);padding-top:13px">
-                    <div style="font-size:11px;font-weight:700;color:#6E7378;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:7px">Стоимость аренды</div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">1–2 дня</span>
-                        <span style="font-weight:700">18 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">3–7 дней</span>
-                        <span style="font-weight:700">16 500 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">8–14 дней</span>
-                        <span style="font-weight:700">14 500 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">15–30 дней</span>
-                        <span style="font-weight:700">12 500 ₽/сут</span>
-                      </div>
-                    
-                  </div>
-                
-                
-              </div>
-              <button data-act="contact" style="width:100%;background:#00E05B;color:#04140B;border:none;border-radius:14px;padding:14px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s ease,transform .15s ease" class="eh19">Забронировать<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
-            </div>
-          </div>
-        
-          <div class="car-card" data-cls="2" style="background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh20">
-            <div style="position:relative;background:linear-gradient(135deg,#EEF1F0,#F8FAF9);padding:18px">
-              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">Премиум</span>
-              <div role="img" aria-label="Tesla Model S" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1536700503339-1e4b06520771?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
-            </div>
-            <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:16px;flex:1">
-              <div style="display:flex;align-items:baseline;gap:7px">
-                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">Tesla</span>
-                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">Model S</span>
-              </div>
-              <div style="display:flex;gap:8px">
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#00A23F"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">600</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 13.5V9"></path><path d="M9.5 2h5"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">3,2</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="16" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2"><rect x="2" y="7" width="16" height="10" rx="2.5"></rect><path d="M20.5 10.5v3" stroke-linecap="round"></path><rect x="4.5" y="9.5" width="7" height="5" fill="#00A23F" stroke="none"></rect></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">100</span><span style="font-size:10px;color:#585D63;margin-top:2px">кВт·ч</span></div>
-                </div>
-              </div>
-              <div style="margin-top:auto">
-                
-                  <div style="border-top:1px solid rgba(10,11,13,0.07);padding-top:13px">
-                    <div style="font-size:11px;font-weight:700;color:#6E7378;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:7px">Стоимость аренды</div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">1–2 дня</span>
-                        <span style="font-weight:700">21 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">3–7 дней</span>
-                        <span style="font-weight:700">18 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">8–14 дней</span>
-                        <span style="font-weight:700">15 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">15–30 дней</span>
-                        <span style="font-weight:700">13 900 ₽/сут</span>
-                      </div>
-                    
-                  </div>
-                
-                
-              </div>
-              <button data-act="contact" style="width:100%;background:#00E05B;color:#04140B;border:none;border-radius:14px;padding:14px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s ease,transform .15s ease" class="eh21">Забронировать<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
-            </div>
-          </div>
-        
-          <div class="car-card" data-cls="3" style="background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh22">
-            <div style="position:relative;background:linear-gradient(135deg,#EEF1F0,#F8FAF9);padding:18px">
-              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">Бизнес & Спорт</span>
-              <div role="img" aria-label="Tesla Model S Plaid" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1620891549027-942fdc95d3f5?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
-            </div>
-            <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:16px;flex:1">
-              <div style="display:flex;align-items:baseline;gap:7px">
-                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">Tesla</span>
-                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">Model S Plaid</span>
-              </div>
-              <div style="display:flex;gap:8px">
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#00A23F"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">600</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 13.5V9"></path><path d="M9.5 2h5"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">2,1</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="16" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2"><rect x="2" y="7" width="16" height="10" rx="2.5"></rect><path d="M20.5 10.5v3" stroke-linecap="round"></path><rect x="4.5" y="9.5" width="7" height="5" fill="#00A23F" stroke="none"></rect></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">100</span><span style="font-size:10px;color:#585D63;margin-top:2px">кВт·ч</span></div>
-                </div>
-              </div>
-              <div style="margin-top:auto">
-                
-                  <div style="border-top:1px solid rgba(10,11,13,0.07);padding-top:13px">
-                    <div style="font-size:11px;font-weight:700;color:#6E7378;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:7px">Стоимость аренды</div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">1–2 дня</span>
-                        <span style="font-weight:700">34 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">3–7 дней</span>
-                        <span style="font-weight:700">29 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">8–14 дней</span>
-                        <span style="font-weight:700">25 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">15–30 дней</span>
-                        <span style="font-weight:700">19 900 ₽/сут</span>
-                      </div>
-                    
-                  </div>
-                
-                
-              </div>
-              <button data-act="contact" style="width:100%;background:#00E05B;color:#04140B;border:none;border-radius:14px;padding:14px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s ease,transform .15s ease" class="eh23">Забронировать<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
-            </div>
-          </div>
-        
-          <div class="car-card" data-cls="3" style="background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh24">
-            <div style="position:relative;background:linear-gradient(135deg,#EEF1F0,#F8FAF9);padding:18px">
-              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">Бизнес & Спорт</span>
-              <div role="img" aria-label="Porsche Taycan Turbo" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1736794111717-bb95d80466be?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
-            </div>
-            <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:16px;flex:1">
-              <div style="display:flex;align-items:baseline;gap:7px">
-                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">Porsche</span>
-                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">Taycan Turbo</span>
-              </div>
-              <div style="display:flex;gap:8px">
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#00A23F"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">450</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 13.5V9"></path><path d="M9.5 2h5"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">3,2</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="16" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2"><rect x="2" y="7" width="16" height="10" rx="2.5"></rect><path d="M20.5 10.5v3" stroke-linecap="round"></path><rect x="4.5" y="9.5" width="7" height="5" fill="#00A23F" stroke="none"></rect></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">93</span><span style="font-size:10px;color:#585D63;margin-top:2px">кВт·ч</span></div>
-                </div>
-              </div>
-              <div style="margin-top:auto">
-                
-                  <div style="border-top:1px solid rgba(10,11,13,0.07);padding-top:13px">
-                    <div style="font-size:11px;font-weight:700;color:#6E7378;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:7px">Стоимость аренды</div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">1–2 дня</span>
-                        <span style="font-weight:700">39 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">3–7 дней</span>
-                        <span style="font-weight:700">34 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">8–14 дней</span>
-                        <span style="font-weight:700">29 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">15–30 дней</span>
-                        <span style="font-weight:700">23 900 ₽/сут</span>
-                      </div>
-                    
-                  </div>
-                
-                
-              </div>
-              <button data-act="contact" style="width:100%;background:#00E05B;color:#04140B;border:none;border-radius:14px;padding:14px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s ease,transform .15s ease" class="eh25">Забронировать<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
-            </div>
-          </div>
-        
-          <div class="car-card" data-cls="3" style="background:#fff;border:1px solid rgba(10,11,13,0.07);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:transform .22s ease,box-shadow .25s ease" class="eh26">
-            <div style="position:relative;background:linear-gradient(135deg,#EEF1F0,#F8FAF9);padding:18px">
-              <span style="position:absolute;top:16px;left:16px;z-index:2;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border:1px solid rgba(10,11,13,0.06);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#0A0B0D">Бизнес & Спорт</span>
-              <div role="img" aria-label="Lotus Eletre" style="width:100%;height:184px;background:#EEF1F0 center/cover no-repeat;background-image:url('https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=720&q=75');border-radius:14px"></div>
-            </div>
-            <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:16px;flex:1">
-              <div style="display:flex;align-items:baseline;gap:7px">
-                <span style="font-family:Montserrat;font-weight:700;font-size:20px;letter-spacing:-0.01em">Lotus</span>
-                <span style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:-0.01em;color:#454B52">Eletre</span>
-              </div>
-              <div style="display:flex;gap:8px">
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#00A23F"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">600</span><span style="font-size:10px;color:#585D63;margin-top:2px">км хода</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 13.5V9"></path><path d="M9.5 2h5"></path></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">4,5</span><span style="font-size:10px;color:#585D63;margin-top:2px">с до 100</span></div>
-                </div>
-                <div style="flex:1;display:flex;align-items:center;gap:8px;background:#F5F6F6;border-radius:13px;padding:9px 10px">
-                  <svg width="16" height="15" viewBox="0 0 24 24" fill="none" stroke="#00A23F" stroke-width="2"><rect x="2" y="7" width="16" height="10" rx="2.5"></rect><path d="M20.5 10.5v3" stroke-linecap="round"></path><rect x="4.5" y="9.5" width="7" height="5" fill="#00A23F" stroke="none"></rect></svg>
-                  <div style="display:flex;flex-direction:column;line-height:1.05"><span style="font-weight:700;font-size:14px">112</span><span style="font-size:10px;color:#585D63;margin-top:2px">кВт·ч</span></div>
-                </div>
-              </div>
-              <div style="margin-top:auto">
-                
-                  <div style="border-top:1px solid rgba(10,11,13,0.07);padding-top:13px">
-                    <div style="font-size:11px;font-weight:700;color:#6E7378;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:7px">Стоимость аренды</div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">1–2 дня</span>
-                        <span style="font-weight:700">32 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">3–7 дней</span>
-                        <span style="font-weight:700">27 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">8–14 дней</span>
-                        <span style="font-weight:700">23 900 ₽/сут</span>
-                      </div>
-                    
-                      <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:13px">
-                        <span style="color:#585D63">15–30 дней</span>
-                        <span style="font-weight:700">18 900 ₽/сут</span>
-                      </div>
-                    
-                  </div>
-                
-                
-              </div>
-              <button data-act="contact" style="width:100%;background:#00E05B;color:#04140B;border:none;border-radius:14px;padding:14px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s ease,transform .15s ease" class="eh27">Забронировать<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
-            </div>
-          </div>
-        
-      </div>
+        </div><button class="cat-prev" aria-label="Назад" style="position:absolute;top:130px;left:-8px;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:#fff;border:1px solid rgba(10,11,13,0.1);box-shadow:0 10px 28px rgba(0,0,0,0.14);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:5;transition:transform .15s ease" class="eh14"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A0B0D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg></button><button class="cat-next" aria-label="Вперёд" style="position:absolute;top:130px;right:-8px;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:#fff;border:1px solid rgba(10,11,13,0.1);box-shadow:0 10px 28px rgba(0,0,0,0.14);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:5;transition:transform .15s ease" class="eh15"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A0B0D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></button></div>
     </div>
   </section>
 
@@ -1300,7 +887,7 @@ img,video{max-width:100%}
       </div>
       <div style="opacity:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(184px,1fr));gap:14px;margin-top:28px">
 
-        <button data-act="contact" style="position:relative;overflow:hidden;text-align:left;background:#fff;border:1px solid rgba(10,11,13,0.08);border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px;min-height:172px;cursor:pointer;font-family:Manrope;transition:transform .22s ease,box-shadow .28s ease,border-color .22s ease" class="eh28">
+        <button data-act="contact" style="position:relative;overflow:hidden;text-align:left;background:#fff;border:1px solid rgba(10,11,13,0.08);border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px;min-height:172px;cursor:pointer;font-family:Manrope;transition:transform .22s ease,box-shadow .28s ease,border-color .22s ease" class="eh16">
           <span style="position:absolute;right:-34px;top:-34px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle, rgba(0,224,91,0.13), transparent 70%);pointer-events:none"></span>
           <div style="position:relative;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,rgba(0,224,91,0.18),rgba(0,184,77,0.08));display:flex;align-items:center;justify-content:center;color:#00A23F"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18a8 8 0 1 1 16 0"></path><path d="M12 14l3.6-3.3"></path></svg></div>
           <div style="position:relative;margin-top:auto;display:flex;flex-direction:column;gap:14px">
@@ -1312,7 +899,7 @@ img,video{max-width:100%}
           </div>
         </button>
 
-        <button data-act="contact" style="position:relative;overflow:hidden;text-align:left;background:#fff;border:1px solid rgba(10,11,13,0.08);border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px;min-height:172px;cursor:pointer;font-family:Manrope;transition:transform .22s ease,box-shadow .28s ease,border-color .22s ease" class="eh29">
+        <button data-act="contact" style="position:relative;overflow:hidden;text-align:left;background:#fff;border:1px solid rgba(10,11,13,0.08);border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px;min-height:172px;cursor:pointer;font-family:Manrope;transition:transform .22s ease,box-shadow .28s ease,border-color .22s ease" class="eh17">
           <span style="position:absolute;right:-34px;top:-34px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle, rgba(0,224,91,0.13), transparent 70%);pointer-events:none"></span>
           <div style="position:relative;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,rgba(0,224,91,0.18),rgba(0,184,77,0.08));display:flex;align-items:center;justify-content:center;color:#00A23F"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15.5l-8-2.2V5.5a1.5 1.5 0 0 0-3 0v6.9L2 14.7v2.1l8-1.6V19l-2.2 1.4v1.4L12 20.7l4.2 1.1v-1.4L14 19v-3.8l7 1.4z"></path></svg></div>
           <div style="position:relative;margin-top:auto;display:flex;flex-direction:column;gap:14px">
@@ -1324,7 +911,7 @@ img,video{max-width:100%}
           </div>
         </button>
 
-        <button data-act="contact" style="position:relative;overflow:hidden;text-align:left;background:#fff;border:1px solid rgba(10,11,13,0.08);border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px;min-height:172px;cursor:pointer;font-family:Manrope;transition:transform .22s ease,box-shadow .28s ease,border-color .22s ease" class="eh30">
+        <button data-act="contact" style="position:relative;overflow:hidden;text-align:left;background:#fff;border:1px solid rgba(10,11,13,0.08);border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px;min-height:172px;cursor:pointer;font-family:Manrope;transition:transform .22s ease,box-shadow .28s ease,border-color .22s ease" class="eh18">
           <span style="position:absolute;right:-34px;top:-34px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle, rgba(0,224,91,0.13), transparent 70%);pointer-events:none"></span>
           <div style="position:relative;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,rgba(0,224,91,0.18),rgba(0,184,77,0.08));display:flex;align-items:center;justify-content:center;color:#00A23F"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5S3.5 15.5 3.5 9.7C3.5 7 5.4 5.3 7.7 5.3c1.7 0 3.2 1 4.3 2.6 1.1-1.6 2.6-2.6 4.3-2.6 2.3 0 4.2 1.7 4.2 4.4 0 5.8-8.5 10.8-8.5 10.8z"></path></svg></div>
           <div style="position:relative;margin-top:auto;display:flex;flex-direction:column;gap:14px">
@@ -1336,7 +923,7 @@ img,video{max-width:100%}
           </div>
         </button>
 
-        <button data-act="contact" style="position:relative;overflow:hidden;text-align:left;background:#fff;border:1px solid rgba(10,11,13,0.08);border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px;min-height:172px;cursor:pointer;font-family:Manrope;transition:transform .22s ease,box-shadow .28s ease,border-color .22s ease" class="eh31">
+        <button data-act="contact" style="position:relative;overflow:hidden;text-align:left;background:#fff;border:1px solid rgba(10,11,13,0.08);border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px;min-height:172px;cursor:pointer;font-family:Manrope;transition:transform .22s ease,box-shadow .28s ease,border-color .22s ease" class="eh19">
           <span style="position:absolute;right:-34px;top:-34px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle, rgba(0,224,91,0.13), transparent 70%);pointer-events:none"></span>
           <div style="position:relative;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,rgba(0,224,91,0.18),rgba(0,184,77,0.08));display:flex;align-items:center;justify-content:center;color:#00A23F"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"></rect><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8 14h3"></path></svg></div>
           <div style="position:relative;margin-top:auto;display:flex;flex-direction:column;gap:14px">
@@ -1348,7 +935,7 @@ img,video{max-width:100%}
           </div>
         </button>
 
-        <button data-act="contact" style="position:relative;overflow:hidden;text-align:left;background:#fff;border:1px solid rgba(10,11,13,0.08);border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px;min-height:172px;cursor:pointer;font-family:Manrope;transition:transform .22s ease,box-shadow .28s ease,border-color .22s ease" class="eh32">
+        <button data-act="contact" style="position:relative;overflow:hidden;text-align:left;background:#fff;border:1px solid rgba(10,11,13,0.08);border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px;min-height:172px;cursor:pointer;font-family:Manrope;transition:transform .22s ease,box-shadow .28s ease,border-color .22s ease" class="eh20">
           <span style="position:absolute;right:-34px;top:-34px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle, rgba(0,224,91,0.13), transparent 70%);pointer-events:none"></span>
           <div style="position:relative;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,rgba(0,224,91,0.18),rgba(0,184,77,0.08));display:flex;align-items:center;justify-content:center;color:#00A23F"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"></circle><path d="M5.5 20a6.5 6.5 0 0 1 13 0"></path></svg></div>
           <div style="position:relative;margin-top:auto;display:flex;flex-direction:column;gap:14px">
@@ -1451,7 +1038,7 @@ img,video{max-width:100%}
           <p style="font-size:16px;color:#585D63;line-height:1.6;margin:20px 0 0">Прокат электромобилей ЭкоРент — это не только высокий уровень комфорта и приятный сервис. Это яркие, современные и технологичные машины, которые отлично подойдут как для путешествий, так и для торжественных мероприятий.</p>
           <p style="font-size:16px;color:#585D63;line-height:1.6;margin:14px 0 0">Мы организуем прокат электромобилей в Санкт-Петербурге и даём возможность лично испытать электрические авто в действии.</p>
           <p style="font-size:16px;color:#585D63;line-height:1.6;margin:14px 0 0">Мы сделали всё, чтобы максимально ускорить процедуру оформления, а оплату можно внести удобным для вас способом.</p>
-          <button data-act="contact" style="margin-top:26px;background:linear-gradient(135deg,#00E05B,#00B84D);color:#04140B;border:none;border-radius:999px;padding:16px 30px;font-family:Manrope;font-weight:700;font-size:16px;cursor:pointer;box-shadow:0 12px 28px rgba(0,224,91,0.32);transition:transform .2s ease,box-shadow .25s ease" class="eh33">Подобрать автомобиль</button>
+          <button data-act="contact" style="margin-top:26px;background:linear-gradient(135deg,#00E05B,#00B84D);color:#04140B;border:none;border-radius:999px;padding:16px 30px;font-family:Manrope;font-weight:700;font-size:16px;cursor:pointer;box-shadow:0 12px 28px rgba(0,224,91,0.32);transition:transform .2s ease,box-shadow .25s ease" class="eh21">Подобрать автомобиль</button>
         </div>
         <div style="position:relative;border-radius:22px;overflow:hidden;min-height:380px;background:#E9EDEC">
           <video src="https://assets.mixkit.co/videos/52427/52427-360.mp4" poster="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=1100&q=80" autoplay loop muted playsinline aria-label="Премиальный электромобиль в движении" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block"></video>
@@ -1509,15 +1096,15 @@ img,video{max-width:100%}
           <div style="display:flex;align-items:center;flex-wrap:wrap;gap:14px 18px;margin-top:18px">
             <a href="tel:+79119371888" style="color:#fff;font-family:Montserrat;font-weight:800;font-size:22px;text-decoration:none;letter-spacing:-0.01em">+7 (911) 937-18-88</a>
             <div style="display:flex;gap:9px">
-              <a href="https://wa.me/79119371888" target="_blank" rel="noopener" style="width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .15s ease,color .15s ease" class="eh34"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.43-4.4-1.2l-.3-.18-2.9.85.86-2.8-.2-.32A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.78.96-.14.17-.29.19-.54.06a6.7 6.7 0 0 1-3.3-2.9c-.25-.43.25-.4.71-1.33.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.78 2.7 4.3 3.79 1.6.69 2.22.75 3.02.63.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.3z"></path></svg></a>
-              <a href="https://t.me/" target="_blank" rel="noopener" style="width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .15s ease,color .15s ease" class="eh35"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.3 15.6c-.25 1.1-.9 1.37-1.83.85l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1 .5l.36-5.13L17.2 6.4c.4-.36-.09-.56-.62-.2L6.9 12.4l-5-1.57c-1.08-.34-1.1-1.08.23-1.6l19.5-7.52c.9-.33 1.7.22 1.27 2.59z"></path></svg></a>
-              <a href="https://max.ru/" target="_blank" rel="noopener" style="width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .15s ease,color .15s ease" class="eh36"><span style="font-family:Montserrat;font-weight:800;font-size:18px;line-height:1">M</span></a>
+              <a href="https://wa.me/79119371888" target="_blank" rel="noopener" style="width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .15s ease,color .15s ease" class="eh22"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.43-4.4-1.2l-.3-.18-2.9.85.86-2.8-.2-.32A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.78.96-.14.17-.29.19-.54.06a6.7 6.7 0 0 1-3.3-2.9c-.25-.43.25-.4.71-1.33.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.78 2.7 4.3 3.79 1.6.69 2.22.75 3.02.63.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.3z"></path></svg></a>
+              <a href="https://t.me/" target="_blank" rel="noopener" style="width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .15s ease,color .15s ease" class="eh23"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.3 15.6c-.25 1.1-.9 1.37-1.83.85l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1 .5l.36-5.13L17.2 6.4c.4-.36-.09-.56-.62-.2L6.9 12.4l-5-1.57c-1.08-.34-1.1-1.08.23-1.6l19.5-7.52c.9-.33 1.7.22 1.27 2.59z"></path></svg></a>
+              <a href="https://max.ru/" target="_blank" rel="noopener" style="width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .15s ease,color .15s ease" class="eh24"><span style="font-family:Montserrat;font-weight:800;font-size:18px;line-height:1">M</span></a>
             </div>
           </div>
         </div>
         <div style="position:relative;flex:1 1 220px;min-width:200px">
           <input type="tel" placeholder="Номер телефона" style="display:block;width:100%;background:rgba(255,255,255,0.14);border:1.5px solid rgba(255,255,255,0.5);border-radius:13px;padding:15px 16px;font-family:Manrope;font-size:15px;color:#fff;outline:none;box-sizing:border-box">
-          <button data-act="contact" style="display:block;width:100%;margin-top:11px;background:#fff;color:#0A7C3B;border:none;border-radius:13px;padding:16px;font-family:Manrope;font-weight:800;font-size:16px;letter-spacing:0.02em;cursor:pointer;transition:transform .2s ease,box-shadow .25s ease" class="eh37">Задать вопрос</button>
+          <button data-act="contact" style="display:block;width:100%;margin-top:11px;background:#fff;color:#0A7C3B;border:none;border-radius:13px;padding:16px;font-family:Manrope;font-weight:800;font-size:16px;letter-spacing:0.02em;cursor:pointer;transition:transform .2s ease,box-shadow .25s ease" class="eh25">Задать вопрос</button>
         </div>
       </div>
     </div>
@@ -1534,34 +1121,34 @@ img,video{max-width:100%}
           </div>
           <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;margin:18px 0 0;max-width:320px">Премиальные электромобили в аренду и по подписке в Санкт-Петербурге. Без залога, с КАСКО и бесплатной зарядкой.</p>
           <div style="display:flex;gap:10px;margin-top:20px">
-            <a href="https://wa.me/79119371888" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .15s ease,color .15s ease" class="eh38"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.43-4.4-1.2l-.3-.18-2.9.85.86-2.8-.2-.32A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.78.96-.14.17-.29.19-.54.06a6.7 6.7 0 0 1-3.3-2.9c-.25-.43.25-.4.71-1.33.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.78 2.7 4.3 3.79 1.6.69 2.22.75 3.02.63.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.3z"></path></svg></a>
-            <a href="https://max.ru/" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .15s ease,color .15s ease" class="eh39"><span style="font-family:Montserrat;font-weight:800;font-size:18px;line-height:1">M</span></a>
-            <a href="https://t.me/" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .15s ease,color .15s ease" class="eh40"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.3 15.6c-.25 1.1-.9 1.37-1.83.85l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1 .5l.36-5.13L17.2 6.4c.4-.36-.09-.56-.62-.2L6.9 12.4l-5-1.57c-1.08-.34-1.1-1.08.23-1.6l19.5-7.52c.9-.33 1.7.22 1.27 2.59z"></path></svg></a>
+            <a href="https://wa.me/79119371888" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .15s ease,color .15s ease" class="eh26"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.43-4.4-1.2l-.3-.18-2.9.85.86-2.8-.2-.32A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.78.96-.14.17-.29.19-.54.06a6.7 6.7 0 0 1-3.3-2.9c-.25-.43.25-.4.71-1.33.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.78 2.7 4.3 3.79 1.6.69 2.22.75 3.02.63.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.3z"></path></svg></a>
+            <a href="https://max.ru/" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .15s ease,color .15s ease" class="eh27"><span style="font-family:Montserrat;font-weight:800;font-size:18px;line-height:1">M</span></a>
+            <a href="https://t.me/" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .15s ease,color .15s ease" class="eh28"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.3 15.6c-.25 1.1-.9 1.37-1.83.85l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1 .5l.36-5.13L17.2 6.4c.4-.36-.09-.56-.62-.2L6.9 12.4l-5-1.57c-1.08-.34-1.1-1.08.23-1.6l19.5-7.52c.9-.33 1.7.22 1.27 2.59z"></path></svg></a>
           </div>
         </div>
         <div>
           <div style="font-weight:700;font-size:14px;margin-bottom:16px;color:#fff">Навигация</div>
           <div style="display:flex;flex-direction:column;gap:11px">
-            <a href="#catalog" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh41">Автопарк</a>
-            <a href="#formats" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh42">Форматы</a>
-            <a href="#charging" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh43">Зарядка</a>
-            <a href="#conditions" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh44">Условия</a>
-            <a href="#faq" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh45">FAQ</a>
+            <a href="#catalog" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh29">Автопарк</a>
+            <a href="#formats" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh30">Форматы</a>
+            <a href="#charging" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh31">Зарядка</a>
+            <a href="#conditions" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh32">Условия</a>
+            <a href="#faq" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh33">FAQ</a>
           </div>
         </div>
         <div>
           <div style="font-weight:700;font-size:14px;margin-bottom:16px;color:#fff">Документы</div>
           <div style="display:flex;flex-direction:column;gap:11px">
-            <a href="#" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh46">Пользовательское соглашение</a>
-            <a href="#" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh47">Политика конфиденциальности</a>
-            <a href="#" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh48">Согласие на обработку ПДн</a>
+            <a href="#" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh34">Пользовательское соглашение</a>
+            <a href="#" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh35">Политика конфиденциальности</a>
+            <a href="#" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh36">Согласие на обработку ПДн</a>
           </div>
         </div>
         <div style="min-width:240px">
           <div style="font-weight:700;font-size:14px;margin-bottom:16px;color:#fff">Контакты</div>
           <div style="display:flex;flex-direction:column;gap:10px">
             <a href="tel:+79119371888" style="text-decoration:none;color:#fff;font-size:18px;font-weight:700;font-family:Montserrat">+7 (911) 937-18-88</a>
-            <a href="mailto:info@eco-rent.ru" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh49">info@eco-rent.ru</a>
+            <a href="mailto:info@eco-rent.ru" style="text-decoration:none;color:rgba(255,255,255,0.6);font-size:14px;transition:color .15s ease" class="eh37">info@eco-rent.ru</a>
             <span style="color:rgba(255,255,255,0.6);font-size:14px;line-height:1.55;margin-top:4px">Санкт-Петербург, Уральская, 10,<br>корпус 2, офис 39</span>
             <span style="color:rgba(255,255,255,0.6);font-size:14px;margin-top:4px">Ежедневно, 9:00–21:00</span>
           </div>
@@ -1597,22 +1184,17 @@ img,video{max-width:100%}
             <span style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#00E05B,#00B84D);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,224,91,0.42)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.8.4 1.6.7 2.3a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.7-1.3a2 2 0 0 1 2.1-.4c.7.3 1.5.6 2.3.7a2 2 0 0 1 1.7 2z"></path></svg></span>
           </a>
 
-        </div><button data-act="fab" aria-label="Связаться" class="eh50" style="position:relative;width:62px;height:62px;border-radius:50%;border:none;cursor:pointer;background:linear-gradient(135deg,#00E05B,#00B84D);box-shadow:0 14px 34px rgba(0,224,91,0.46);display:flex;align-items:center;justify-content:center;transition:transform .18s ease"><span style="position:absolute;inset:0;border-radius:50%;background:#00E05B;animation:ecoPulse 2.6s ease-out infinite;z-index:-1"></span><svg class="fab-phone" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.8.4 1.6.7 2.3a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.7-1.3a2 2 0 0 1 2.1-.4c.7.3 1.5.6 2.3.7a2 2 0 0 1 1.7 2z"></path></svg><svg class="fab-x" style="display:none" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></div>
+        </div><button data-act="fab" aria-label="Связаться" class="eh38" style="position:relative;width:62px;height:62px;border-radius:50%;border:none;cursor:pointer;background:linear-gradient(135deg,#00E05B,#00B84D);box-shadow:0 14px 34px rgba(0,224,91,0.46);display:flex;align-items:center;justify-content:center;transition:transform .18s ease"><span style="position:absolute;inset:0;border-radius:50%;background:#00E05B;animation:ecoPulse 2.6s ease-out infinite;z-index:-1"></span><svg class="fab-phone" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.8.4 1.6.7 2.3a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.7-1.3a2 2 0 0 1 2.1-.4c.7.3 1.5.6 2.3.7a2 2 0 0 1 1.7 2z"></path></svg><svg class="fab-x" style="display:none" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#04140B" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></div>
 
 </div>
 <script>
 (function(){
-  // табы каталога
-  var tabs=document.querySelectorAll('.cat-tab'), cards=document.querySelectorAll('.car-card');
-  cards.forEach(function(c){c.style.display=(c.dataset.cls==='0')?'flex':'none';}); // стартовый таб
-
-  tabs.forEach(function(t){t.addEventListener('click',function(){
-    var cls=t.dataset.tab;
-    tabs.forEach(function(x){x.classList.remove('is-active');x.style.background='#fff';x.style.color='#0A0B0D';x.style.border='1px solid rgba(10,11,13,0.12)';});
-    t.classList.add('is-active');t.style.background='#0A0B0D';t.style.color='#fff';t.style.border='none';
-    cards.forEach(function(c){c.style.display=(c.dataset.cls===cls)?'flex':'none';});
-    applyLang();
-  });});
+  // карусель каталога
+  var track=document.querySelector('.cat-track');
+  function carStep(){var c=track&&track.querySelector('.car-card');return c?c.getBoundingClientRect().width+24:340;}
+  var pv=document.querySelector('.cat-prev'), nx=document.querySelector('.cat-next');
+  if(pv)pv.addEventListener('click',function(){track.scrollLeft-=carStep();});
+  if(nx)nx.addEventListener('click',function(){track.scrollLeft+=carStep();});
   // аккордеон FAQ
   document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){
     var wrap=b.parentElement, ans=wrap.querySelector('.faq-a'), open=ans.style.display!=='none';
