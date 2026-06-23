@@ -15,27 +15,34 @@ src = open(SRC, encoding="utf-8").read()
 head_src = src[:src.find('<script type="text/x-dc"')]
 
 # ---------- данные ----------
-TABS = ['Комфорт', 'Комфорт+', 'Премиум', 'Бизнес & Спорт']
-PERIODS = ['1–2 дня', '3–7 дней', '8–14 дней', '15–30 дней']
-# Реальный парк клиента (5 авто). Цены — плейсхолдеры (подтвердить у клиента).
+PERIODS = ['1–3 сут', '4–7 сут', '8–15 сут', '16–31 сут', '31+ сут']
+# Реальный парк клиента (5 авто). Цены — от клиента (актуальные).
 # Фото — проверенные Unsplash-ID (плейсхолдеры под реальные фото клиента).
 IMG = lambda i: f"https://images.unsplash.com/photo-{i}?auto=format&fit=crop&w=720&q=75"
 CARS = [
     dict(brand="Tesla",   model="Model Y", year="2022", rng="533", accel="5,0", battery="75",
-         prices=['8 900', '7 600', '6 600', '5 400'], img=IMG("1560958089-b8a1929cea89")),
+         prices=['12 000', '11 000', '10 000', '9 000', '8 000'], img=IMG("1669625397388-32934837bd3a")),
     dict(brand="Tesla",   model="Model 3", year="2022", rng="510", accel="6,1", battery="60",
-         prices=['7 900', '6 800', '5 900', '4 900'], img=IMG("1606016159991-dfe4f2746ad5")),
+         prices=['10 000', '9 000', '8 000', '7 000', '6 000'], img=IMG("1606016159991-dfe4f2746ad5")),
     dict(brand="Evolute", model="i-Sky",   year="2024", rng="405", accel="9,5", battery="62",
-         prices=['5 900', '5 100', '4 400', '3 600'], img=IMG("1718780138801-d93ebf484827")),
+         prices=['9 000', '8 000', '7 000', '6 000', '5 000'], img=IMG("1718780138801-d93ebf484827")),
     dict(brand="Evolute", model="i-Pro",   year="2022", rng="433", accel="9,9", battery="54",
-         prices=['5 500', '4 700', '4 100', '3 400'], img=IMG("1571987502227-9231b837d92a")),
+         prices=['4 500', '4 000', '3 500', '3 000', '2 500'], img=IMG("1571987502227-9231b837d92a")),
     dict(brand="BMW",     model="i3",      year="",     rng="300", accel="7,3", battery="42",
-         prices=['6 900', '5 900', '5 100', '4 200'], img=IMG("1617704548623-340376564e68")),
+         prices=['4 500', '4 200', '3 900', '3 600', '3 300'], img=IMG("1617704548623-340376564e68")),
 ]
 
-# EN-словарь из шаблона
+# EN-словарь из шаблона + патч под новые/изменённые строки (чтобы EN-перевод не сломался)
 mEN = re.search(r'var EN = (\{.*?\});', src, re.S)
-EN_JSON = mEN.group(1)
+_en = json.loads(mEN.group(1))
+_en.update({
+    "Аренда от 1 суток": "Rental from 1 day",
+    "ОСАГО на всех, КАСКО частично": "OSAGO on all, CASCO on some",
+    "Позвоните на круглосуточную линию поддержки — мы оформим документы, при необходимости пришлём эвакуатор и подменный автомобиль. Все авто застрахованы по ОСАГО, на части машин действует КАСКО — ваша ответственность минимальна.": "Call our 24/7 support line — we'll handle the paperwork and, if needed, send a tow truck and a replacement car. All cars have OSAGO insurance, some also have CASCO — your liability is minimal.",
+    "Достаточно паспорта и водительского удостоверения. Возраст — от 22 лет, стаж вождения — от 2 лет. Оформление занимает 10–15 минут.": "A passport and a driver's license are enough. Age — from 22, driving experience — from 2 years. Registration takes 10–15 minutes.",
+    "В посуточной аренде включено 200 км в сутки, далее — 10 ₽/км. В аренде по подписке пробег безлимитный.": "Daily rental includes 200 km per day, then 10 ₽/km. Subscription rental has unlimited mileage.",
+})
+EN_JSON = json.dumps(_en, ensure_ascii=False)
 
 # ---------- извлечь тело (#top целиком, с FAB) ----------
 bi = src.find('<div id="top"')
