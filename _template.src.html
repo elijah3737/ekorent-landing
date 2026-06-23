@@ -765,14 +765,14 @@
         </div>
         <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:clamp(24px,3vw,40px);margin-top:30px">
           <div style="border-top:1px solid rgba(255,255,255,0.14);padding-top:20px">
-            <div style="font-family:Montserrat;font-weight:800;font-size:clamp(40px,4vw,52px);line-height:1;color:#00E05B">23+</div>
+            <div style="font-family:Montserrat;font-weight:800;font-size:clamp(40px,4vw,52px);line-height:1;color:#00E05B">22+</div>
             <div style="font-weight:700;font-size:17px;margin-top:12px;color:#fff">Возраст</div>
-            <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.55;margin:8px 0 0">Водителю должно быть не менее 23 лет на момент оформления.</p>
+            <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.55;margin:8px 0 0">Водителю должно быть не менее 22 лет на момент оформления.</p>
           </div>
           <div style="border-top:1px solid rgba(255,255,255,0.14);padding-top:20px">
-            <div style="font-family:Montserrat;font-weight:800;font-size:clamp(40px,4vw,52px);line-height:1;color:#00E05B">3 года</div>
+            <div style="font-family:Montserrat;font-weight:800;font-size:clamp(40px,4vw,52px);line-height:1;color:#00E05B">2 года</div>
             <div style="font-weight:700;font-size:17px;margin-top:12px;color:#fff">Стаж вождения</div>
-            <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.55;margin:8px 0 0">Непрерывный водительский стаж — от трёх лет.</p>
+            <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.55;margin:8px 0 0">Непрерывный водительский стаж — от двух лет.</p>
           </div>
           <div style="border-top:1px solid rgba(255,255,255,0.14);padding-top:20px">
             <div style="font-family:Montserrat;font-weight:800;font-size:clamp(40px,4vw,52px);line-height:1;color:#00E05B">2</div>
@@ -963,7 +963,8 @@ class Component extends DCLogic {
     { q: 'Могу ли я выехать за пределы Ленинградской области?', a: 'Да, по территории России — без доплат и ограничений. Для выезда за границу нужно согласовать маршрут и оформить разрешение с менеджером заранее.' },
     { q: 'Как возвращать автомобиль — заряженным или нет?', a: 'Заряжать перед возвратом не обязательно. Мы спишем стоимость только израсходованной энергии по тарифу.' },
     { q: 'Какие документы нужны для оформления?', a: 'Достаточно паспорта и водительского удостоверения. Возраст — от 22 лет, стаж вождения — от 2 лет. Оформление занимает 10–15 минут.' },
-    { q: 'Есть ли ограничение по пробегу?', a: 'В посуточной аренде включено 200 км в сутки, далее — 10 ₽/км. В аренде по подписке пробег безлимитный.' }
+    { q: 'Есть ли ограничение по пробегу?', a: 'В посуточной аренде включено 200 км в сутки, далее — 10 ₽/км. В аренде по подписке пробег безлимитный.' },
+    { q: 'Есть ли тест-драйв перед арендой?', a: 'Да. Тест-драйв с инструктором на Tesla Model 3 или Model Y: 1 час — 5 000 ₽, 2 часа — 7 500 ₽.' }
   ];
 
   state = {

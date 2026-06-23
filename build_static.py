@@ -41,6 +41,13 @@ _en.update({
     "Позвоните на круглосуточную линию поддержки — мы оформим документы, при необходимости пришлём эвакуатор и подменный автомобиль. Все авто застрахованы по ОСАГО, на части машин действует КАСКО — ваша ответственность минимальна.": "Call our 24/7 support line — we'll handle the paperwork and, if needed, send a tow truck and a replacement car. All cars have OSAGO insurance, some also have CASCO — your liability is minimal.",
     "Достаточно паспорта и водительского удостоверения. Возраст — от 22 лет, стаж вождения — от 2 лет. Оформление занимает 10–15 минут.": "A passport and a driver's license are enough. Age — from 22, driving experience — from 2 years. Registration takes 10–15 minutes.",
     "В посуточной аренде включено 200 км в сутки, далее — 10 ₽/км. В аренде по подписке пробег безлимитный.": "Daily rental includes 200 km per day, then 10 ₽/km. Subscription rental has unlimited mileage.",
+    # секция «Что нужно для аренды» (22/2):
+    "Водителю должно быть не менее 22 лет на момент оформления.": "The driver must be at least 22 years old at the time of registration.",
+    "2 года": "2 years",
+    "Непрерывный водительский стаж — от двух лет.": "Continuous driving experience — from two years.",
+    # тест-драйв (6-й FAQ):
+    "Есть ли тест-драйв перед арендой?": "Is there a test drive before renting?",
+    "Да. Тест-драйв с инструктором на Tesla Model 3 или Model Y: 1 час — 5 000 ₽, 2 часа — 7 500 ₽.": "Yes. A test drive with an instructor in a Tesla Model 3 or Model Y: 1 hour — 5,000 ₽, 2 hours — 7,500 ₽.",
 })
 EN_JSON = json.dumps(_en, ensure_ascii=False)
 
@@ -132,7 +139,7 @@ faq_tpl = body[i0:ic]
 faqs = []
 for m in re.finditer(r"\{ q: '((?:[^'\\]|\\.)*)', a: '((?:[^'\\]|\\.)*)' \}", src):
     faqs.append((m.group(1).replace("\\'", "'"), m.group(2).replace("\\'", "'")))
-faqs = faqs[:5]
+faqs = faqs[:6]
 # выделить chevron (open=up, closed=down) и answer из шаблона
 chev_up = re.search(r'<sc-if value="\{\{ f\.open \}\}"[^>]*><span[^>]*>.*?</span></sc-if>', faq_tpl, re.S).group(0)
 chev_up = re.sub(r'</?sc-if[^>]*>', '', chev_up)
