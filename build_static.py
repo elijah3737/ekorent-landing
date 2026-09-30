@@ -27,7 +27,7 @@ CARS = [
     dict(brand="Evolute", model="i-Sky",   year="2024", rng="405", accel="9,5", battery="62",
          prices=['9 000', '8 000', '7 000', '6 000', '5 000'], img=IMG("1767949374180-e5895daa1990")),
     dict(brand="Evolute", model="i-Pro",   year="2022", rng="433", accel="9,9", battery="54",
-         prices=['4 500', '4 000', '3 500', '3 000', '2 500'], img=IMG("1711921127505-f4a8727329a5")),
+         prices=['4 500', '4 000', '3 500', '3 000', '2 500'], img="evolute-ipro.webp"),
     dict(brand="BMW",     model="i3",      year="",     rng="300", accel="7,3", battery="42",
          prices=['4 500', '4 200', '3 900', '3 600', '3 300'], img=IMG("1666005336445-3b5fdcc6cc3b")),
 ]
@@ -250,6 +250,46 @@ ld = {"@context": "https://schema.org", "@graph": [
 ]}
 ld_json = json.dumps(ld, ensure_ascii=False)
 
+# Коды подтверждения прав в вебмастерах. Заполнить, когда сайт добавлен
+# в Яндекс.Вебмастер / Google Search Console. Пустые значения -> теги не выводятся.
+YANDEX_VERIFY = ""
+GOOGLE_VERIFY = ""
+_vm = []
+if YANDEX_VERIFY:
+    _vm.append(f'<meta name="yandex-verification" content="{YANDEX_VERIFY}">')
+if GOOGLE_VERIFY:
+    _vm.append(f'<meta name="google-site-verification" content="{GOOGLE_VERIFY}">')
+VERIFY_META = ("\n" + "\n".join(_vm)) if _vm else ""
+
+# --- Яндекс.Метрика (счётчик Ecorent, аккаунт ecotaxi-online) ---
+METRIKA_ID = 88421141
+METRIKA_HEAD = """<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(__ID__, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
+   // Цели по кликам: звонок, мессенджеры, email, бронирование
+   document.addEventListener("click", function(e){
+     var el = e.target.closest && e.target.closest("a,button");
+     if(!el || typeof ym !== "function") return;
+     var href = ((el.getAttribute && el.getAttribute("href")) || "").toLowerCase();
+     var txt = (el.textContent || "").toLowerCase();
+     var g = null;
+     if(href.indexOf("tel:") === 0 || txt.indexOf("позвонить") > -1) g = "call";
+     else if(/wa\\.me|whatsapp/.test(href)) g = "whatsapp";
+     else if(/t\\.me|telegram/.test(href)) g = "telegram";
+     else if(href.indexOf("mailto:") === 0) g = "email";
+     else if(txt.indexOf("забронировать") > -1) g = "booking";
+     if(g) ym(__ID__, "reachGoal", g);
+   }, true);
+</script>
+<!-- /Yandex.Metrika counter -->""".replace("__ID__", str(METRIKA_ID))
+METRIKA_NOSCRIPT = ('<noscript><div><img src="https://mc.yandex.ru/watch/%d" '
+                    'style="position:absolute; left:-9999px;" alt="" /></div></noscript>') % METRIKA_ID
+
 base_css = """*{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:Manrope,system-ui,sans-serif;color:#0A0B0D;background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -306,10 +346,12 @@ html = f"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#00A23F">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
 <title>{TITLE}</title>
 <meta name="description" content="{DESC}">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow">{VERIFY_META}
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ЭкоРент">
@@ -318,12 +360,20 @@ html = f"""<!DOCTYPE html>
 <meta property="og:description" content="{DESC}">
 <meta property="og:url" content="{URL}">
 <meta property="og:image" content="{URL}og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ЭкоРент — аренда электромобилей в Санкт-Петербурге">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{TITLE}">
+<meta name="twitter:description" content="{DESC}">
 <meta name="twitter:image" content="{URL}og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">{ld_json}</script>
+{METRIKA_HEAD}
 <style>
 {base_css}
 {chr(10).join(hover_css)}
@@ -331,6 +381,7 @@ html = f"""<!DOCTYPE html>
 {styles}
 </head>
 <body>
+{METRIKA_NOSCRIPT}
 {body}
 <script>{JS}</script>
 </body>
